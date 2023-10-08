@@ -13,7 +13,7 @@ class Tests:
 
     def setup_method(self, method):
         chrome_options = Options()
-        chrome_options.add_argument("--headless")
+        # chrome_options.add_argument("--headless")
         chrome_options.add_argument("--no-sandbox")
         chrome_options.add_argument("--disable-dev-shm-usage")
         chrome_options.add_argument("--start-maximized")
@@ -129,9 +129,6 @@ class Tests:
         product_price = self.get_parsed_product_price(product_price_text)
 
         assert product_price == expected_product_price
-
-    def test_fail_test_for_screenshot(self):
-        assert False
 
     def get_parsed_product_price(self, expected_product_price_text):
         # £37.32
