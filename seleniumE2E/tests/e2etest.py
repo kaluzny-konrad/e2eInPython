@@ -90,6 +90,7 @@ class Tests:
         books_sub_category = side_categories.find_element(By.XPATH, "//a[contains(text(), 'Classics')]")
         books_sub_category.click()
 
+        page_body = self.driver.find_element(By.XPATH, "//div[@class='container-fluid page']")
         results = page_body.find_element(By.XPATH, "//form/strong[1]")
         assert results.text == "19"
 
@@ -132,7 +133,7 @@ class Tests:
 
     def get_parsed_product_price(self, expected_product_price_text):
         # £37.32
-        price_text = expected_product_price_text.replace("£", "").replace(".", ",")
+        price_text = expected_product_price_text.replace("£", "")
         return float(price_text)
 
 if __name__ == "__main__":

@@ -1,10 +1,8 @@
 {
-    "files.autoSave": "onFocusChange",
-    "python.testing.pytestArgs": [
-        "e2etest.py"
-    ],
-    "python.testing.unittestEnabled": false,
-    "python.testing.pytestEnabled": true,
-    "python.testing.cwd": "${workspaceFolder}/tests",
-    "python.testing.autoTestDiscoverOnSaveEnabled": true,
+  "files.autoSave": "onFocusChange",
+  "python.testing.pytestArgs": ["e2etest.py", "test_expectation.py"],
+  "python.testing.unittestEnabled": false,
+  "python.testing.pytestEnabled": true,
+  "python.testing.cwd": "${workspaceFolder}/tests",
+  "python.testing.autoTestDiscoverOnSaveEnabled": true
 }
